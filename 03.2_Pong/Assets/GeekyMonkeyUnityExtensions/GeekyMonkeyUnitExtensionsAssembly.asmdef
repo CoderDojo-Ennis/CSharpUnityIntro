@@ -1,0 +1,12 @@
+{
+    "name": "GeekyMonkeyUnitExtensionsAssembly",
+  "references": [
+    "UniRx",
+    "UniRx.Async",
+    "Unity.TextMeshPro"
+  ],
+    "optionalUnityReferences": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false
+}
