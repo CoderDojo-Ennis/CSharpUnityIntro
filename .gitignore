@@ -37,3 +37,4 @@ sysinfo.txt
 *.apk
 *.unitypackage
 03.2_Pong/Logs
+Docs/~*.docx
