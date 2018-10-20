@@ -38,3 +38,4 @@ sysinfo.txt
 *.unitypackage
 03.2_Pong/Logs
 Docs/~*.docx
+05.2_Objects_Balls_Unity/Assembly-CSharp.csproj

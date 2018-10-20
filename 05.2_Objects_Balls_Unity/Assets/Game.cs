@@ -16,17 +16,7 @@ public class Game : MonoBehaviour
     {
         GameObject ball = Instantiate(ballPrefab);
         BallMoveScript ballMover = ball.GetComponent<BallMoveScript>();
-        ballMover.x = x;
-        ballMover.y = y;
         ball.GetComponent<Renderer>().material.color = color;
-    }
-
-    void makeBalls(int count)
-    {
-        for (int i = 0; i < count; i++)
-        {
-            makeBall(Random.Range(-6f, 6f), Random.Range(-4.5f, 4.5f), new Color(Random.Range(0, 1f), Random.Range(0, 1f), Random.Range(0, 1f)));
-        }
     }
 
     // Update is called once per frame
