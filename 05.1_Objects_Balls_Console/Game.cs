@@ -3,16 +3,24 @@ using System.Collections.Generic;
 
 class Game
 {
-    public Ball ball;
+    List<Ball> Balls;
 
     public void StartGame()
     {
+        Balls = new List<Ball>();
         CreateBall();
         RunGameLoop();
     }
 
     public void CreateBall()
     {
+        for(int i = 0; i< 10; i = i + 1)
+        {
+            int x = new Random().Next(1, 20);
+            int y = new Random().Next(1, 20);
+            Ball ball = new Ball(x, y, ConsoleColor.Green);
+            Balls.Add(ball);
+        }
     }
 
     public void RunGameLoop()
@@ -26,9 +34,10 @@ class Game
                 done = true;
             }
 
+            ClearScreen();
             DrawScreen();
 
-            System.Threading.Thread.Sleep(20);
+            System.Threading.Thread.Sleep(40);
 
         }
     }
@@ -41,8 +50,11 @@ class Game
 
     public void DrawScreen()
     {
-        ball.Move();
-        ball.Draw();
+        foreach (Ball ball in Balls)
+        {
+            ball.Move();
+            ball.Draw();
+        }
     }
 
 }

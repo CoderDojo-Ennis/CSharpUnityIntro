@@ -9,7 +9,19 @@ public class Game : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        makeBall(1, 2, Color.red);
+        //makeBall(1, 2, Color.red);
+        makeBalls(20);
+    }
+
+    void makeBalls(int count)
+    {
+        for (int i = 0; i < count; i++)
+        {
+            float x = Random.Range(0f, 20f);
+            float y = Random.Range(0f, 20f);
+            Color color = Color.red;
+            makeBall(x, y, color);
+        }
     }
 
     void makeBall(float x, float y, Color color)
